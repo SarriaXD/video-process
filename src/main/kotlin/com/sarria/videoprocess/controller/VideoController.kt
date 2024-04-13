@@ -1,5 +1,6 @@
-package com.sarria.videoprocess
+package com.sarria.videoprocess.controller
 
+import com.sarria.videoprocess.service.VideoConversionService
 import org.springframework.http.ResponseEntity
 import org.springframework.web.bind.annotation.PostMapping
 import org.springframework.web.bind.annotation.RequestMapping

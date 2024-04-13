@@ -1,14 +1,10 @@
-package com.sarria.videoprocess
+package com.sarria.videoprocess.service
 
 import com.github.kokorin.jaffree.ffmpeg.FFmpeg
 import com.github.kokorin.jaffree.ffmpeg.UrlInput.fromPath
 import com.github.kokorin.jaffree.ffmpeg.UrlOutput
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.launch
 import kotlinx.coroutines.runBlocking
 import org.springframework.stereotype.Service
-import java.io.BufferedReader
-import java.io.InputStreamReader
 import kotlin.io.path.Path
 
 @Service
