@@ -3,7 +3,6 @@ package com.sarria.videoprocess.service
 import com.github.kokorin.jaffree.ffmpeg.FFmpeg
 import com.github.kokorin.jaffree.ffmpeg.UrlInput.fromPath
 import com.github.kokorin.jaffree.ffmpeg.UrlOutput
-import kotlinx.coroutines.runBlocking
 import org.springframework.stereotype.Service
 import kotlin.io.path.Path
 
@@ -11,7 +10,7 @@ import kotlin.io.path.Path
 class VideoConversionService {
     val resolutions = arrayOf("240x360", "480x720", "1080x2048")
 
-    fun convertToHls(inputFilePath: String, outputDir: String) = runBlocking {
+    fun convertToHls(inputFilePath: String, outputDir: String) {
         resolutions.forEach { resolution ->
             val outputPath = "$outputDir/${resolution}_output.m3u8"
             FFmpeg.atPath()
